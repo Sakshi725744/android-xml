@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/rootRL"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -15,125 +15,246 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="53dp">
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="30dp"
+            android:text="HOME AUTOMATION"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#CF42C5"
+            app:layout_constraintBottom_toTopOf="@+id/rootRL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.449"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="172dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="enter name"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="134dp"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="59dp"
-        android:layout_marginStart="139dp"
-        android:layout_marginLeft="139dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginRight="139dp"
-        android:text="HOME AUTOMATION"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp"
-        android:textColor="#CF42C5"/>
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="223dp"
+                tools:layout_editor_absoluteY="188dp"
+                android:background="#EAF037"/>>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="172dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:hint="enter name"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="134dp" />
+        </LinearLayout>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
+
+        <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter name"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="188dp"
-        android:background="#EAF037"/>
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIGHTS 1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="115dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="115dp"
+            android:textColor="#EAF037"
+            android:textSize="45dp"/>/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LIGHTS 1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="115dp"
-        android:textColor="#EAF037"
-        android:textSize="45dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="on"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="117dp"
+                tools:layout_editor_absoluteY="188dp"
+                android:background="#EAF037"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="on"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="188dp"
-        android:background="#EAF037"/>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EAF037"
+                android:layout_marginLeft="20dp"
+                android:text="off"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="188dp" />
+            <Chronometer
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/cmTimer"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginLeft="20dp"
+                android:textSize="25dp"
+                android:id="@+id/editText1"
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="off"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="188dp"
-        android:background="#EAF037"/>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LIGHTS 2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="270dp"
-        android:textColor="#EAF037"
-        android:textSize="45dp"/>
+                />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="on"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:background="#EAF037"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="off"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="341dp"
-        android:background="#EAF037"/>
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FAN 1"
-        android:textColor="#EAF037"
-        android:textSize="45dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="435dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIGHTS 2"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="270dp"
+                android:textColor="#EAF037"
+                android:textSize="45dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="on"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="521dp"
-        android:background="#EAF037"/>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="off"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="521dp"
-        android:background="#EAF037"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="on"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="117dp"
+                tools:layout_editor_absoluteY="341dp"
+                android:background="#EAF037"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="off"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="341dp"
+                android:background="#EAF037"/>
+                <Chronometer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/cmTimer2"
+                    android:layout_marginLeft="20dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="25dp"
+                    android:id="@+id/editText2"
+
+
+                    />
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAN 1"
+                android:layout_marginLeft="20dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="270dp"
+                android:textColor="#EAF037"
+                android:textSize="45dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="on"
+                    android:layout_marginLeft="20dp"
+                    tools:layout_editor_absoluteX="117dp"
+                    tools:layout_editor_absoluteY="341dp"
+                    android:background="#EAF037"/>
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="off"
+                    android:layout_marginLeft="20dp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="341dp"
+                    android:background="#EAF037"/>
+                <Chronometer
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/cmTimer3"
+                    android:layout_marginLeft="20dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="25dp"
+                    android:id="@+id/editText3"
+
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
